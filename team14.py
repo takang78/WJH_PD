@@ -24,10 +24,7 @@ def move(my_history, their_history, my_score, their_score):
     # The most recent round is my_history[-1] and their_history[-1].
     
     # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
-    if len[history] :-1 
-		return 'b'
-	else return 'c'	
+    # Decide whether to return 'c' or 'b'.	
     return 'c'
 
     
