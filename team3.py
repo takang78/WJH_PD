@@ -1,3 +1,4 @@
+import random
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -7,7 +8,7 @@
 ####
 
 team_name = 'Danny DeVito' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
+strategy_name = 'DeVito Devastator'
 strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
@@ -30,9 +31,10 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     elif their_history[-3]=='b':
         return 'b'
+    elif their_history[-2]=='cb':
+        return 'b'
     else:
         return 'c'
-
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
