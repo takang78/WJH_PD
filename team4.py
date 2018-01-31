@@ -25,18 +25,19 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    if 'bbbbb' in their_history:
+    if 'bb' in their_history:
         return 'b'
     else:
         return 'c'
-    if 'bccccc' in their_history:
-        return 'c'
-    elif 'bcbcbc' in their_history:
-        return'b'
-    elif 'cccc' in their_history:
-        return 'c'
-    elif 'bbcbbcbbc' in their_history:
+    if 'bccccccc' in their_history:
         return 'b'
+    elif 'bcbc' in their_history:
+        return'b'
+    elif 'cccb' in their_history:
+        return 'b'
+    elif 'cccccc' in their_history:
+        return 'c'
+
     
         
 
@@ -68,4 +69,5 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')                 
+   
