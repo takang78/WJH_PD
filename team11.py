@@ -17,6 +17,10 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+    def rounds_played():
+        if len(my_history)>85:
+             return 'b'
+    
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
@@ -28,8 +32,14 @@ def move(my_history, their_history, my_score, their_score):
 
     if len(their_history)==0:
         return 'c'
-    else:
+    elif 'ccc' in their_history:
+        return 'b' 
+    elif 'bbb' in their_history:
         return 'b'
+    elif 'bbccbb' in their_history:
+        return 'b'
+    else:
+        return 'c'
         
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
