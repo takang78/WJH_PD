@@ -34,6 +34,7 @@ Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
              P0     P1     P2     P3     P4     P5     P6     P7     P8     P9
+<<<<<<< HEAD
 vs. P0 :      0    100     49      0      0     36      0   -250      8      0
 vs. P1 :   -500      0   -375   -376   -253   -252   -253   -250   -250   -255
 vs. P2 :   -249    -75      0   -199   -199    -78    -79   -250    -76   -250
@@ -45,11 +46,25 @@ vs. P7 :   -250   -250   -250   -250   -250   -250   -250      0   -250   -250
 vs. P8 :    -44   -250   -374   -348   -230   -241   -250   -250      0    -51
 vs. P9 :      0   -245     50      0      0    -96      0   -250     10      0
 TOTAL  :  -1226  -1538  -2035  -1297   -951   -988   -911  -2250  -1341   -912
+=======
+vs. P0 :      0    100     50      0      0     27      0   -250      9      0
+vs. P1 :   -500      0   -376   -377   -255   -252   -252   -250   -253   -255
+vs. P2 :   -250    -74      0   -199   -201    -77    -78   -250    -79    -81
+vs. P3 :      0    -74   -199      0      0    -17      0   -250    -74      0
+vs. P4 :      0   -244   -196      0      0    -15      0   -250   -228      0
+vs. P5 :   -140   -248   -369    -82    -25      0    -94   -250   -231   -109
+vs. P6 :      0   -248   -369      0      0    -90      0   -250   -246      0
+vs. P7 :   -250   -250   -250   -250   -250   -250   -250      0   -250   -250
+vs. P8 :    -49   -247   -368   -364   -235   -231   -250   -250      0   -239
+vs. P9 :      0   -244   -360      0      0   -106      0   -250   -234      0
+TOTAL  :  -1189  -1529  -2437  -1272   -966  -1011   -924  -2250  -1586   -934
+>>>>>>> Emitsun1-31
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
+<<<<<<< HEAD
 E6        (P6):        -92 points with Collude until betrayed                  
 Pile      (P9):        -92 points with Conditional Fight Back                  
 E4        (P4):        -96 points with Use early history                       
@@ -59,7 +74,18 @@ E3        (P3):       -130 points with Collude but retaliate
 E8        (P8):       -135 points with Collude 90% unless betrayed within last 
 E1        (P1):       -154 points with Betray                                  
 E2        (P2):       -204 points with Alternate                               
+=======
+E6        (P6):        -93 points with Collude until betrayed                  
+Pile      (P9):        -94 points with Conditional Fight Back                  
+E4        (P4):        -97 points with Use early history                       
+E5        (P5):       -102 points with Collude first 100 rounds unless betrayed
+E0        (P0):       -119 points with Collude                                 
+E3        (P3):       -128 points with Collude but retaliate                   
+E1        (P1):       -153 points with Betray                                  
+E8        (P8):       -159 points with Collude 90% unless betrayed within last 
+>>>>>>> Emitsun1-31
 E7        (P7):       -225 points with Error                                   
+E2        (P2):       -244 points with Alternate                               
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 example0--------------------------------------------------------------------------------
@@ -385,6 +411,7 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+<<<<<<< HEAD
     if 'bb' in their_history:
         return 'b'
     else:
@@ -397,6 +424,21 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     elif 'cccccc' in their_history:
         return 'c'
+=======
+    if 'bccccccc' in their_history:
+        return 'b'
+    elif 'bcbc' in their_history:
+        return'b'
+    elif 'cccb' in their_history:
+        return 'b'
+    elif 'cccccc' in their_history:
+        return 'c'
+    elif 'bb' in their_history:
+        return 'b'
+    else:
+        return 'c'
+    
+>>>>>>> Emitsun1-31
 
     
         
@@ -438,23 +480,33 @@ Section 3 - Game Data for Team E0
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
+<<<<<<< HEAD
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 cccc
 BBBB
+=======
+ccccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
--249 pt/round: E0(P0) "Collude"
-49 pt/round: E2(P2) "Alternate"
+-250 pt/round: E0(P0) "Collude"
+50 pt/round: E2(P2) "Alternate"
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
+<<<<<<< HEAD
 CcCcCcCcCcCcCcCcCcCcCcCcC
 CBCBCBCBCBCBCBCBCBCBCBCBC
+=======
+CcCcCcCcCcCcCcCcCcCcCcCcCc
+CBCBCBCBCBCBCBCBCBCBCBCBCB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E0(P0) "Collude"
@@ -462,8 +514,16 @@ CBCBCBCBCBCBCBCBCBCBCBCBC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E0(P0) "Collude"
@@ -471,6 +531,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -482,6 +543,22 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-140 pt/round: E0(P0) "Collude"
+27 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCccccccccccccccccccccccccccccccccccccccc
+CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E0(P0) "Collude"
@@ -489,8 +566,16 @@ CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCC
+CCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E0(P0) "Collude"
@@ -498,6 +583,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
+<<<<<<< HEAD
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                   
 
@@ -509,6 +595,22 @@ CCCCCCCBCCCCCCCCCBCCCCCCBCCCCCCCCCCCCBCCCCBCCCCCCCCCCCCCCCCCCCCCCCCCCCBBCCCCCCCC
 
 ccCCCCCCCCCCCCCCCCcCCCCCCCCCCCCCCCCCCcCCCCCcCCCCCCCCCCCCCCC
 BBCCCCCCCCCCCCCCCCBCCCCCCCCCCCCCCCCCCBCCCCCBCCCCCCCCCCCCCCC
+=======
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                                
+
+ccccccccc
+         
+
+--------------------------------------------------------------------------------
+-49 pt/round: E0(P0) "Collude"
+9 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+cCCCCCCCCCCCCCCCCCCCCCCCCCCcCCCCCCCCCCCCCCCCCCCCccCCCcCCCCCCCCCCcCCCCCCCCCCCCCCc
+BCCCCCCCCCCCCCCCCCCCCCCCCCCBCCCCCCCCCCCCCCCCCCCCBBCCCBCCCCCCCCCCBCCCCCCCCCCCCCCB
+
+CCcCCCCCCCCCCCCcCCCCcCCCCCcCCCCCCCCcCCCCCcCCcCCCCCCCCCCCCCCCCCCC
+CCBCCCCCCCCCCCCBCCCCBCCCCCBCCCCCCCCBCCCCCBCCBCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E0(P0) "Collude"
@@ -516,8 +618,8 @@ BBCCCCCCCCCCCCCCCCBCCCCCCCCCCCCCCCCCCBCCCCCBCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -528,11 +630,16 @@ Section 3 - Game Data for Team E1
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 BBBB
 cccc
+=======
+BBBBBBBBBBBBBBBBBBBBBBBBBBB
+ccccccccccccccccccccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -75 pt/round: E1(P1) "Betray"
@@ -540,8 +647,13 @@ cccc
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
+<<<<<<< HEAD
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+=======
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -74 pt/round: E1(P1) "Betray"
@@ -549,6 +661,7 @@ cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
+<<<<<<< HEAD
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
@@ -563,6 +676,19 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbb
+=======
+BbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+--------------------------------------------------------------------------------
+-244 pt/round: E1(P1) "Betray"
+-255 pt/round: E4(P4) "Use early history"
+BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -249 pt/round: E1(P1) "Betray"
@@ -578,12 +704,24 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 -248 pt/round: E1(P1) "Betray"
+<<<<<<< HEAD
 -253 pt/round: E6(P6) "Collude until betrayed"
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+-252 pt/round: E6(P6) "Collude until betrayed"
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbb
+bbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E1(P1) "Betray"
@@ -591,6 +729,7 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                                 
 
+<<<<<<< HEAD
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                   
 
@@ -617,21 +756,48 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbb
+=======
+bbbbbbbbbbbbbbbbbbbbbb
+                      
+
+--------------------------------------------------------------------------------
+-247 pt/round: E1(P1) "Betray"
+-253 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-244 pt/round: E1(P1) "Betray"
+-255 pt/round: Pile(P9) "Conditional Fight Back"
+BBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+ccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E2
 --------------------------------------------------------------------------------
-49 pt/round: E2(P2) "Alternate"
--249 pt/round: E0(P0) "Collude"
+50 pt/round: E2(P2) "Alternate"
+-250 pt/round: E0(P0) "Collude"
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
+<<<<<<< HEAD
 CBCBCBCBCBCBCBCBCBCBCBCBC
 CcCcCcCcCcCcCcCcCcCcCcCcC
+=======
+CBCBCBCBCBCBCBCBCBCBCBCBCB
+CcCcCcCcCcCcCcCcCcCcCcCcCc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -375 pt/round: E2(P2) "Alternate"
@@ -639,8 +805,13 @@ CcCcCcCcCcCcCcCcCcCcCcCcC
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
+<<<<<<< HEAD
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+=======
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -199 pt/round: E2(P2) "Alternate"
@@ -648,15 +819,21 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
+<<<<<<< HEAD
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+=======
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
--199 pt/round: E2(P2) "Alternate"
--199 pt/round: E4(P4) "Use early history"
+-196 pt/round: E2(P2) "Alternate"
+-201 pt/round: E4(P4) "Use early history"
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
+<<<<<<< HEAD
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
@@ -668,6 +845,19 @@ CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+=======
+cBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBc
+
+--------------------------------------------------------------------------------
+-369 pt/round: E2(P2) "Alternate"
+-77 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -368 pt/round: E2(P2) "Alternate"
@@ -675,8 +865,13 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
+<<<<<<< HEAD
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+=======
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E2(P2) "Alternate"
@@ -684,6 +879,7 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
                                                                                 
 
+<<<<<<< HEAD
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
                                                                     
 
@@ -707,6 +903,28 @@ CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
+=======
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
+                           
+
+--------------------------------------------------------------------------------
+-368 pt/round: E2(P2) "Alternate"
+-79 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+
+--------------------------------------------------------------------------------
+-360 pt/round: E2(P2) "Alternate"
+-81 pt/round: Pile(P9) "Conditional Fight Back"
+CBCBCbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+CcCcCbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -717,8 +935,16 @@ Section 3 - Game Data for Team E3
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -376 pt/round: E3(P3) "Collude but retaliate"
@@ -726,8 +952,13 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
+<<<<<<< HEAD
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+=======
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -199 pt/round: E3(P3) "Collude but retaliate"
@@ -735,8 +966,13 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
+<<<<<<< HEAD
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+=======
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E3(P3) "Collude but retaliate"
@@ -744,6 +980,7 @@ cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -755,6 +992,19 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-82 pt/round: E3(P3) "Collude but retaliate"
+-17 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E3(P3) "Collude but retaliate"
@@ -762,11 +1012,16 @@ CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E3(P3) "Collude but retaliate"
@@ -774,6 +1029,7 @@ CCCCCCCCCCCCCCCCCCCC
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
+<<<<<<< HEAD
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                        
 
@@ -785,6 +1041,22 @@ CCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+=======
+cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                      
+
+--------------------------------------------------------------------------------
+-364 pt/round: E3(P3) "Collude but retaliate"
+-74 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+CCCCCcBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+CCCCCBcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E3(P3) "Collude but retaliate"
@@ -792,8 +1064,13 @@ bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -804,6 +1081,7 @@ Section 3 - Game Data for Team E4
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -818,15 +1096,36 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbb
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--199 pt/round: E4(P4) "Use early history"
--199 pt/round: E2(P2) "Alternate"
+-255 pt/round: E4(P4) "Use early history"
+-244 pt/round: E1(P1) "Betray"
+cbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+BbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
+
+--------------------------------------------------------------------------------
+-201 pt/round: E4(P4) "Use early history"
+-196 pt/round: E2(P2) "Alternate"
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
+<<<<<<< HEAD
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+=======
+BcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcB
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E4(P4) "Use early history"
@@ -834,6 +1133,7 @@ cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
@@ -845,6 +1145,19 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCcbcbbb
 CCCCCCCCCCCCCCCCCCCCCBbBbbb
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-25 pt/round: E4(P4) "Use early history"
+-15 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCcbcbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbBbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E4(P4) "Use early history"
@@ -864,6 +1177,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 cc c                                                                            
                                                                                 
 
+<<<<<<< HEAD
                           
                           
 
@@ -875,6 +1189,25 @@ CCCCCCCCCCCCCCCBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+                                                                                
+                                                                                
+
+                                        
+                                        
+
+--------------------------------------------------------------------------------
+-235 pt/round: E4(P4) "Use early history"
+-228 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+CCCCCCCCCCCCcBcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCBcBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbb
+bbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E4(P4) "Use early history"
@@ -885,13 +1218,19 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCC
 CCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E5
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 36 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 -183 pt/round: E0(P0) "Collude"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -899,6 +1238,15 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 CCCCCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+=======
+27 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-140 pt/round: E0(P0) "Collude"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCCCCccccccccccccccccccccccccccccccccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -252 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
@@ -913,11 +1261,16 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 -78 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+=======
+-77 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+>>>>>>> Emitsun1-31
 -369 pt/round: E2(P2) "Alternate"
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
+<<<<<<< HEAD
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
@@ -947,6 +1300,37 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+--------------------------------------------------------------------------------
+-17 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-82 pt/round: E3(P3) "Collude but retaliate"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+CCCCCCCCCCCCCCCCCCCCCcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+
+--------------------------------------------------------------------------------
+-15 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-25 pt/round: E4(P4) "Use early history"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCBbBbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbcbbbbbb
+
+--------------------------------------------------------------------------------
+-90 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-94 pt/round: E6(P6) "Collude until betrayed"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
@@ -954,6 +1338,7 @@ CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
+<<<<<<< HEAD
 cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                      
 
@@ -969,14 +1354,39 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 --------------------------------------------------------------------------------
 -96 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 -106 pt/round: Pile(P9) "Conditional Fight Back"
+=======
+cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbb
+             
+
+--------------------------------------------------------------------------------
+-231 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-231 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+CCCCCCCCCcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-106 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+-109 pt/round: Pile(P9) "Conditional Fight Back"
+>>>>>>> Emitsun1-31
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCBBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCcccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
+<<<<<<< HEAD
 bbbbbbbbbb
 bbbbbbbbbb
+=======
+bbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -987,17 +1397,36 @@ Section 3 - Game Data for Team E6
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 -253 pt/round: E6(P6) "Collude until betrayed"
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCC
+CCCC
+
+--------------------------------------------------------------------------------
+-252 pt/round: E6(P6) "Collude until betrayed"
+>>>>>>> Emitsun1-31
 -248 pt/round: E1(P1) "Betray"
 cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
+<<<<<<< HEAD
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbb
+bbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -79 pt/round: E6(P6) "Collude until betrayed"
@@ -1005,8 +1434,13 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
+<<<<<<< HEAD
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+=======
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E6(P6) "Collude until betrayed"
@@ -1014,11 +1448,16 @@ cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E6(P6) "Collude until betrayed"
@@ -1033,6 +1472,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 -79 pt/round: E6(P6) "Collude until betrayed"
 -75 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -1040,6 +1480,15 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+-94 pt/round: E6(P6) "Collude until betrayed"
+-90 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E6(P6) "Collude until betrayed"
@@ -1047,6 +1496,7 @@ CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
+<<<<<<< HEAD
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                              
 
@@ -1058,6 +1508,22 @@ Bcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                                
+
+ccccccccccccccccccccccccccc
+                           
+
+--------------------------------------------------------------------------------
+-250 pt/round: E6(P6) "Collude until betrayed"
+-246 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+Ccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: E6(P6) "Collude until betrayed"
@@ -1065,11 +1531,16 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCC
 CCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -1080,8 +1551,16 @@ Section 3 - Game Data for Team E7
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
                                                                   
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+=======
+                                                                                
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+         
+ccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1089,8 +1568,13 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
+<<<<<<< HEAD
                                                                   
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+                      
+bbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1098,8 +1582,13 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                                 
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
+<<<<<<< HEAD
                                                                     
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+=======
+                           
+cbcbcbcbcbcbcbcbcbcbcbcbcbc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1107,8 +1596,13 @@ cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
                                                        
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+=======
+                                                      
+cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1116,8 +1610,16 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 cc c                                                                            
 
+<<<<<<< HEAD
                           
                           
+=======
+                                                                                
+                                                                                
+
+                                        
+                                        
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1125,8 +1627,16 @@ cc c
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
                                                                      
 cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+                                                                                
+cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+             
+bbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1134,17 +1644,32 @@ cccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
                                                              
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+=======
+                                                                                
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+                           
+ccccccccccccccccccccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
 -250 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
                                                                                 
+<<<<<<< HEAD
 ccccccbcccccccbccbccbccccccbcccccccccccccccccccccccbcccccbcbccbccbcccccccccccccc
 
                                                                       
 cccccccccbcccccccccbccccccccccccccccccbcccbcccccccccbcccbccccccccccccc
+=======
+cbccbccccccccccccccccbccccccccccccccccccccccccccccccccbccccccccbccccccbcbccbbccc
+
+                                                                   
+ccccccccbccccccccccccccccccccccccbcccccccccccccccccccccccccccbccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E7(P7) "Error"
@@ -1152,13 +1677,19 @@ cccccccccbcccccccccbccccccccccccccccccbcccbcccccccccbcccbccccccccccccc
                                                                                 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
+<<<<<<< HEAD
                         
 cccccccccccccccccccccccc
+=======
+                                                      
+cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E8
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 8 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
 -44 pt/round: E0(P0) "Collude"
 CCCCCCCBCCCCCCCCCBCCCCCCBCCCCCCCCCCCCBCCCCBCCCCCCCCCCCCCCCCCCCCCCCCCCCBBCCCCCCCC
@@ -1226,10 +1757,80 @@ cBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+=======
+9 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-49 pt/round: E0(P0) "Collude"
+BCCCCCCCCCCCCCCCCCCCCCCCCCCBCCCCCCCCCCCCCCCCCCCCBBCCCBCCCCCCCCCCBCCCCCCCCCCCCCCB
+cCCCCCCCCCCCCCCCCCCCCCCCCCCcCCCCCCCCCCCCCCCCCCCCccCCCcCCCCCCCCCCcCCCCCCCCCCCCCCc
+
+CCBCCCCCCCCCCCCBCCCCBCCCCCBCCCCCCCCBCCCCCBCCBCCCCCCCCCCCCCCCCCCC
+CCcCCCCCCCCCCCCcCCCCcCCCCCcCCCCCCCCcCCCCCcCCcCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-253 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-247 pt/round: E1(P1) "Betray"
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-79 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-368 pt/round: E2(P2) "Alternate"
+CcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+CBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+
+--------------------------------------------------------------------------------
+-74 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-364 pt/round: E3(P3) "Collude but retaliate"
+CCCCCBcBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+CCCCCcBcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+bBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+bcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+
+--------------------------------------------------------------------------------
+-228 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-235 pt/round: E4(P4) "Use early history"
+CCCCCCCCCCCCBcBbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCcBcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbb
+bbbbbbb
+
+--------------------------------------------------------------------------------
+-231 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-231 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+CCCCCCCCCBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-246 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-250 pt/round: E6(P6) "Collude until betrayed"
+CBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Ccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
 -250 pt/round: E7(P7) "Error"
+<<<<<<< HEAD
 ccccccbcccccccbccbccbccccccbcccccccccccccccccccccccbcccccbcbccbccbcccccccccccccc
                                                                                 
 
@@ -1244,6 +1845,22 @@ CCCCCCCCCCCCCCCCCCCCCcCCCcCCCCCCccCCCCCCCccCcCCCCCCCCCCCCCCCCCCCCCCCCcCCCCCCCCCC
 
 CBCCBCCCCCCCCCCCCCCCBCCCCCCC
 CcCCcCCCCCCCCCCCCCCCcCCCCCCC
+=======
+cbccbccccccccccccccccbccccccccccccccccccccccccccccccccbccccccccbccccccbcbccbbccc
+                                                                                
+
+ccccccccbccccccccccccccccccccccccbcccccccccccccccccccccccccccbccccc
+                                                                   
+
+--------------------------------------------------------------------------------
+-234 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+-239 pt/round: Pile(P9) "Conditional Fight Back"
+BCCCCCCBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cCCCCCCcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -1254,11 +1871,12 @@ Section 3 - Game Data for Team Pile
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 -255 pt/round: Pile(P9) "Conditional Fight Back"
+<<<<<<< HEAD
 -245 pt/round: E1(P1) "Betray"
 cccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 BBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -1277,6 +1895,23 @@ CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
+=======
+-244 pt/round: E1(P1) "Betray"
+ccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+BBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-81 pt/round: Pile(P9) "Conditional Fight Back"
+-360 pt/round: E2(P2) "Alternate"
+CcCcCbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+CBCBCbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: Pile(P9) "Conditional Fight Back"
@@ -1284,8 +1919,13 @@ CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: Pile(P9) "Conditional Fight Back"
@@ -1296,20 +1936,34 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCC
 CCCCCC
 
 --------------------------------------------------------------------------------
 -106 pt/round: Pile(P9) "Conditional Fight Back"
 -96 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-109 pt/round: Pile(P9) "Conditional Fight Back"
+-106 pt/round: E5(P5) "Collude first 100 rounds unless betrayed. Betray 101st round forward."
+>>>>>>> Emitsun1-31
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCcccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-CCCCCCCCCCCCCCCCCCCCCBBBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+CCCCCCCCCCCCCCCCCCCCCBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
+<<<<<<< HEAD
 bbbbbbbbbb
 bbbbbbbbbb
+=======
+bbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 0 pt/round: Pile(P9) "Conditional Fight Back"
@@ -1317,11 +1971,16 @@ bbbbbbbbbb
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
+<<<<<<< HEAD
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 CCCC
 CCCC
+=======
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
 -250 pt/round: Pile(P9) "Conditional Fight Back"
@@ -1329,6 +1988,7 @@ CCCC
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
                                                                                 
 
+<<<<<<< HEAD
 cccccccccccccccccccccccc
                         
 
@@ -1340,5 +2000,18 @@ CCCCCCCCCCCCCCCCCCCCCBCCCBCCCCCCBBCCCCCCCBBCBCCCCCCCCCCCCCCCCCCCCCCCCBCCCCCCCCCC
 
 CcCCcCCCCCCCCCCCCCCCcCCCCCCC
 CBCCBCCCCCCCCCCCCCCCBCCCCCCC
+=======
+cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                      
+
+--------------------------------------------------------------------------------
+-239 pt/round: Pile(P9) "Conditional Fight Back"
+-234 pt/round: E8(P8) "Collude 90% unless betrayed within last 10 rounds."
+cCCCCCCcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+BCCCCCCBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> Emitsun1-31
 
 --------------------------------------------------------------------------------
