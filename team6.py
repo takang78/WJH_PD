@@ -7,8 +7,8 @@
 ####
 
 team_name = 'The A Team' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Collude unless betrayed in history.'
+strategy_description = 'It colludes until it reads a single b in their history.'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -30,6 +30,10 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     elif 'cbcb' or 'bbb' in their_history:
         return 'b'
+    
+    #Ideas below    
+    #if len(my_history)==0:
+    #return 'b'
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
