@@ -30,6 +30,11 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     elif 'cbcb' or 'bbb' in their_history:
         return 'b'
+    else:
+        return 'c'
+    
+    #Ideas below    
+    
     
     #Ideas below    
     #if len(my_history)==0:
