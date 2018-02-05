@@ -29,7 +29,7 @@ def move(my_history, their_history, my_score, their_score):
     if 'ccc' in their_history or len(their_history) <= 100:
         return 'c'
     elif 'bbb' or 'cbcb' in their_history:
-        return 'c'
+        return 'b'
     
     #Ideas below    
     
