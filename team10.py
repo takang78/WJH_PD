@@ -38,23 +38,7 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'  
     else:
         return 'b'
-    
-<<<<<<< Updated upstream
-=======
-    if len(their_history)==0:
-        return 'c'                    
-    elif 'bbb' in their_history:
-        return 'b'
-    elif 'ccc' in their_history:
-        return 'b'
-    elif 'cbc' in their_history:
-        return 'b'  
-    else:
-        return 'c'
-    
->>>>>>> Stashed changes
-
-    
+           
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
