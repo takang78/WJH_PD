@@ -8,7 +8,7 @@
 
 team_name = 'Domination' # Only 10 chars displayed.
 strategy_name = 'Example Dominator'
-strategy_description = 'How does this strategy decide?'
+strategy_description = 'It will find the pattern of all examples and Dominate them, as well as everyone in 1st Hour'
 
 import random
         
