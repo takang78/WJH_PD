@@ -7,8 +7,8 @@
 ####
 
 team_name = 'SpiCy' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'win'
+strategy_description = 'would be quicker to just read the code than this'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -17,6 +17,24 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+        turn_counter = 1
+    if turn_counter < 4:
+        if 'b' in their_history:
+            return 'b'
+        else:
+            return 'c'
+    while turn_counter < 91:
+        if their_history[-2] == 'cb':
+            return 'b'
+        elif their_history[-2] == 'bc':
+            return 'b'
+        elif their_history[-2] == 'cc':
+            return 'c'
+        else: 
+            'b'
+    if turn_counter > 90:
+        if 'b' in their_history:
+            return 'b'
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
@@ -66,6 +84,3 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
-              
-              #asf
-              
