@@ -39,7 +39,7 @@ def move(my_history, their_history, my_score, their_score):
     elif 'ccccccccc' in their_history and their_history>100:
         if 'b' in their_history: 
             return 'b'
-        elif len(my_history)>105 and 'b' not in their_history:
+        elif len(my_history)>185 and 'b' not in their_history:
             return 'b' 
         elif random.random()<0.05: # 5% of the other rounds
             return 'b'         # Betray
