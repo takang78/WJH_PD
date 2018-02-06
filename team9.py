@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Hi' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Skillz'
+strategy_description = 'It just works...'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -25,10 +25,19 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+               
+    if 'b' in their_history and 'c' in my_history:
+        return 'b'
+    else: 'c'
     
-    return 'c'
+    if 'b' in their_history:
+        return 'b'
+    elif 'cc' in their_history:
+        return 'c'
+    else:
+        return 'c'
+    
 
-    
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
